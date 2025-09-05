@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Automate Tasks</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Automate Tasks - SNR Automations</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@300;700;900&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -35,47 +41,142 @@
             </ul>
           </li>
           <li><a href="../contact.html">Contact</a></li>
-          <li><a href="../contact.html">Support Us</a></li>
         </ul>
       </nav>
       <div class="nav-actions">
-        <a class="cta-build" href="../contact.html#contact">BUILD YOURS</a>
+        <a class="btn-login" href="../login.html">Login</a>
+        <a class="cta-build" href="../index.html#build">Build Yours</a>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class="why-automate-section">
-      <div class="container">
-        <div class="outcomes-column">
-          <h3>Services (Automate tasks)</h3>
-          <div class="outcome-list">
-            <div class="outcome-item">
-              <div class="outcome-icon">💰</div>
-              <div class="outcome-content">
-                <h4>Cut costs</h4>
-                <p>Reduce overhead and manual errors</p>
-              </div>
+  <!-- Automate Tasks Hero -->
+  <main class="automate-hero">
+    <div class="container">
+      <div class="page-indicator">
+        <span class="indicator">Services (Automate tasks)</span>
+        <span class="indicator-circle">P</span>
+      </div>
+      <h1>Why We Automate</h1>
+    </div>
+  </main>
+
+  <!-- Why We Automate Section -->
+  <section class="why-automate">
+    <div class="container">
+      <div class="automation-diagram">
+        <div class="diagram-content">
+          <!-- Left Column -->
+          <div class="benefits-column left">
+            <div class="benefit-bubble">
+              <h3>Save time</h3>
+              <p>Eliminate hours of repetitive tasks daily</p>
             </div>
-            <div class="outcome-item">
-              <div class="outcome-icon">💎</div>
-              <div class="outcome-content">
-                <h4>Boost Revenue</h4>
-                <p>Convert more leads into paying clients</p>
-              </div>
+            <div class="benefit-bubble">
+              <h3>Scale faster</h3>
+              <p>Grow without hiring more staff</p>
             </div>
-            <div class="outcome-item">
-              <div class="outcome-icon">✨</div>
-              <div class="outcome-content">
-                <h4>Enhance experience</h4>
-                <p>Happier clients, smoother operations</p>
-              </div>
+            <div class="benefit-bubble">
+              <h3>Deliver consistency</h3>
+              <p>High-quality service, every single time</p>
+            </div>
+          </div>
+
+          <!-- Center Line -->
+          <div class="center-line"></div>
+
+          <!-- Right Column -->
+          <div class="benefits-column right">
+            <div class="benefit-bubble">
+              <h3>Cut costs</h3>
+              <p>Reduce overhead and manual errors</p>
+            </div>
+            <div class="benefit-bubble">
+              <h3>Boost Revenue</h3>
+              <p>Convert more leads into paying clients</p>
+            </div>
+            <div class="benefit-bubble">
+              <h3>Enhance experience</h3>
+              <p>Happier clients, smoother Operations</p>
             </div>
           </div>
         </div>
+
+        <!-- Call to Action -->
+        <div class="cta-bubble">
+          <a href="../contact.html" class="btn-primary">Let's build</a>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- What We Automate Section -->
+  <section class="what-automate">
+    <div class="container">
+      <h2>What We Automate</h2>
+      <div class="automation-grid">
+        <div class="automation-item">
+          <div class="automation-icon">📧</div>
+          <h3>Email Marketing</h3>
+          <p>Automated email sequences and campaigns</p>
+        </div>
+        <div class="automation-item">
+          <div class="automation-icon">📊</div>
+          <h3>Data Processing</h3>
+          <p>Automated data entry and analysis</p>
+        </div>
+        <div class="automation-item">
+          <div class="automation-icon">💬</div>
+          <h3>Customer Support</h3>
+          <p>24/7 AI-powered customer service</p>
+        </div>
+        <div class="automation-item">
+          <div class="automation-icon">💰</div>
+          <h3>Invoicing & Payments</h3>
+          <p>Automated billing and payment processing</p>
+        </div>
+        <div class="automation-item">
+          <div class="automation-icon">👥</div>
+          <h3>Lead Management</h3>
+          <p>Automated lead capture and qualification</p>
+        </div>
+        <div class="automation-item">
+          <div class="automation-icon">📈</div>
+          <h3>Reporting</h3>
+          <p>Automated report generation and insights</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Universal CTA Section -->
+  <section class="universal-cta">
+    <div class="container">
+      <h2>Ready to launch yours?</h2>
+      <h3>Smarter work. Bigger Impact.</h3>
+      <p>WITH SNR AUTOMATIONS</p>
+      <a class="btn-primary" href="https://calendly.com/your-name/intro-call" target="_blank" rel="noopener">Let's LAUNCH</a>
+    </div>
+  </section>
+
+  <!-- Chat Agent (voice/text) -->
+  <button class="chat-launch" id="chatOpen" aria-label="Open chat">💬</button>
+  <div class="chat-panel" id="chatPanel" aria-live="polite">
+    <div class="chat-hd">
+      <strong>Chat Agent</strong>
+      <button class="mic" id="micBtn" type="button">🎙 Voice</button>
+    </div>
+    <div class="q-list" id="qList">
+      <div class="q" data-q="What can you automate for me?">What can you automate for me?</div>
+      <div class="q" data-q="How much time will automation save?">How much time will automation save?</div>
+      <div class="q" data-q="What's the cost of automation?">What's the cost of automation?</div>
+      <div class="q" data-q="How quickly can you set this up?">How quickly can you set this up?</div>
+    </div>
+    <div class="chat-ft">
+      <input id="chatInput" placeholder="Type a message…" />
+      <a class="btn-primary" href="https://calendly.com/your-name/intro-call" target="_blank" rel="noopener">Calendly</a>
+    </div>
+  </div>
 
   <footer>
     <div class="container">
@@ -134,6 +235,7 @@
     </div>
   </footer>
 
+  <!-- External JavaScript -->
   <script src="../script.js"></script>
 </body>
 </html>
