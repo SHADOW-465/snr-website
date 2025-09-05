@@ -1,11 +1,11 @@
 :root {
   --bg: #0b0b0c;
   --panel: #121215;
-  --yellow: #f6c90e;
+  --yellow: #F0D700;
   --muted: #b6b6b8;
   --text: #f5f5f7;
   --accent: #fcde4c;
-  --ring: rgba(246, 201, 14, 0.6);
+  --ring: rgba(240, 215, 0, 0.6);
 }
 
 * { box-sizing: border-box; }
@@ -48,6 +48,47 @@ header {
 nav ul { list-style: none; display: flex; gap: 22px; padding: 0; margin: 0; justify-content: center; }
 nav a { color: var(--muted); font-weight: 600; }
 nav a:hover, nav a:focus { color: var(--text); }
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--panel);
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.dropdown-content a {
+  color: var(--muted);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255,255,255,.05);
+  color: var(--text);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 .cta-build {
   padding: 12px 20px; border-radius: 14px; font-weight: 800; letter-spacing: .4px;
   background: var(--yellow); color: #0b0b0c; border: 2px solid #0b0b0c;
@@ -55,6 +96,7 @@ nav a:hover, nav a:focus { color: var(--text); }
   font-size: 1.1rem;
 }
 .cta-build:hover { transform: translateY(-1px); box-shadow: 0 10px 18px rgba(246,201,14,.35); }
+.cta-build { transition: all 0.3s ease; }
 
 /* Hero */
 .hero {
@@ -73,6 +115,7 @@ h1 { margin: 0; font-size: clamp(36px, 7vw, 74px); line-height: 1.05; font-famil
   background: radial-gradient(80% 100% at 50% 0%, rgba(246,201,14,.35), transparent 70%);
   filter: blur(6px); z-index:-1; transition: transform .5s ease;
 }
+.legend { transition: all 0.3s ease; }
 .legend:hover::after { transform: translateY(4px) scale(1.02); }
 
 .hero p { max-width: 58ch; color: var(--muted); font-size: clamp(14px, 2.6vw, 18px); }
@@ -81,18 +124,26 @@ h1 { margin: 0; font-size: clamp(36px, 7vw, 74px); line-height: 1.05; font-famil
   background: var(--yellow); color: #0b0b0c; border: none; padding: 14px 20px; font-weight: 800;
   border-radius: 16px; cursor: pointer; box-shadow: 0 12px 28px rgba(246,201,14,.25); margin-top: 40px;
 }
+.btn-primary { transition: all 0.3s ease; }
 .btn-primary:hover { transform: translateY(-1px); }
-.btn-ghost { padding: 12px 16px; border-radius: 14px; border: 1px dashed rgba(255,255,255,.18); color: var(--text); background: transparent; margin-top: 40px; }
+.btn-ghost { padding: 12px 16px; border-radius: 14px; border: 1px dashed rgba(255,255,255,.18); color: var(--text); background: transparent; margin-top: 40px; transition: all 0.3s ease; }
 
 /* What We Do */
+#whatwedo {
+  padding: 100px 20px;
+  background: transparent;
+}
 #whatwedo h2 { margin-bottom: 32px; font-size: 28px; color: #ddd123; }
 #whatwedo img { display: block; margin: 0 auto 16px; }
 
 /* Hover glow effect for What We Do cards */
 #whatwedo .card {
-  transition: transform 0.3s ease, box-shadow 0.4s ease;
+  transition: all 0.3s ease;
   position: relative;
   z-index: 0;
+  background: transparent;
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,.1);
 }
 
 #whatwedo .card::after {
@@ -156,7 +207,7 @@ section { padding: 64px 20px; }
   padding: 10px;
   border-radius: 8px;
   font-size: 0.95rem;
-  transition: all 0.3s ease, box-shadow 0.4s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
   z-index: 0;
@@ -215,6 +266,7 @@ input:focus, textarea:focus { outline: 2px solid var(--ring); border-color: tran
 .mic { border: 1px solid rgba(255,255,255,.12); padding: 6px 10px; border-radius: 12px; font-size: 13px; color: var(--muted); }
 .q-list { max-height: 260px; overflow:auto; display:grid; gap:10px; padding: 12px 14px; }
 .q { background: #0f0f12; border:1px solid rgba(255,255,255,.08); padding: 10px 12px; border-radius: 12px; cursor: pointer; }
+.q { transition: all 0.3s ease; }
 .q:hover { border-color: rgba(246,201,14,.6); }
 .chat-ft { padding: 12px 14px; border-top: 1px solid rgba(255,255,255,.06); display:flex; gap:10px; }
 .chat-ft input { flex: 1; }
@@ -506,12 +558,12 @@ input:focus, textarea:focus { outline: 2px solid var(--ring); border-color: tran
 
 .courses-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
   padding: 20px 0;
 }
 
@@ -528,7 +580,7 @@ input:focus, textarea:focus { outline: 2px solid var(--ring); border-color: tran
 .course-card.diamond {
   transform: rotate(45deg);
   width: 250px;
-  height: 250px;
+  aspect-ratio: 1 / 1;
   margin: 0 auto;
   display: flex;
   align-items: center;
