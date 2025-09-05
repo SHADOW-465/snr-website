@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - SNR Automations</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@300;700;900&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header>
+    <div class="nav">
+      <div class="brand" aria-label="SNR Automations">
+        <div class="logo" title="SNR">
+         <img src="snr logo.png" alt="SNR Automations Logo">
+</div>
+
+        <div>
+          <div class="brand-name">SNR Automations</div>
+        
+        </div>
+      </div>
+      
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a class="cta-build" href="index.html#build">Build Yours</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Hero -->
+  <main class="contact-hero">
+    <div class="container">
+      <h1>Contact SNR AUTOMATIONS</h1>
+      <p class="subtitle">Ready to help 24/7.</p>
+    </div>
+  </main>
+
+  <!-- Contact Methods -->
+  <section class="contact-methods">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-method">
+          <div class="contact-icon">🏢</div>
+          <h3>Visit us</h3>
+          <p><strong>Office Address:</strong></p>
+          <p>Chennai, Tamil Nadu, India</p>
+          <p><strong>Office Hours:</strong></p>
+          <p>Mon-Fri 9am to 6pm</p>
+          <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-ghost">View on Google Maps</a>
+        </div>
+
+        <div class="contact-method">
+          <div class="contact-icon">📞</div>
+          <h3>Call us</h3>
+          <p><strong>Phone Number:</strong></p>
+          <p>+91 8946084672</p>
+          <p><strong>Available:</strong></p>
+          <p>24/7 for urgent matters</p>
+          <a href="tel:+918946084672" class="btn-ghost">Call Now</a>
+        </div>
+
+        <div class="contact-method">
+          <div class="contact-icon">📧</div>
+          <h3>Support desk</h3>
+          <p><strong>Email Address:</strong></p>
+          <p>snrautomation83@gmail.com</p>
+          <p><strong>Response Time:</strong></p>
+          <p>Within 24 hours</p>
+          <a href="mailto:snrautomation83@gmail.com" class="btn-ghost">Send Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact-form-section">
+    <div class="container">
+      <h2>Get in touch</h2>
+      <div class="form-container">
+        <form onsubmit="event.preventDefault(); window.open('https://calendly.com/your-name/intro-call','_blank')">
+          <div class="form-group">
+            <input type="text" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" placeholder="Mobile number" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Email address" required>
+          </div>
+          <div class="form-group">
+            <textarea rows="4" placeholder="Your message" required></textarea>
+          </div>
+          <button class="btn-primary" type="submit">Send</button>
+        </form>
+        <p class="form-note">We respond within 24 hours. Voice message integration available.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Universal CTA Section -->
+  <section class="universal-cta">
+    <div class="container">
+      <h2>Ready to launch yours?</h2>
+      <h3>Smarter work. Bigger Impact.</h3>
+      <p>WITH SNR AUTOMATIONS</p>
+      <a class="btn-primary" href="https://calendly.com/your-name/intro-call" target="_blank" rel="noopener">Let's LAUNCH</a>
+    </div>
+  </section>
+
+  <!-- Chat Agent (voice/text) -->
+  <button class="chat-launch" id="chatOpen" aria-label="Open chat">💬</button>
+  <div class="chat-panel" id="chatPanel" aria-live="polite">
+    <div class="chat-hd">
+      <strong>Chat Agent</strong>
+      <button class="mic" id="micBtn" type="button">🎙 Voice</button>
+    </div>
+    <div class="q-list" id="qList">
+      <div class="q" data-q="How fast can we launch?">How fast can we launch?</div>
+      <div class="q" data-q="What will it cost?">What will it cost?</div>
+      <div class="q" data-q="Can you integrate my tools?">Can you integrate my tools?</div>
+      <div class="q" data-q="Can you show a sample black & yellow theme?">Can you show a sample black & yellow theme?</div>
+    </div>
+    <div class="chat-ft">
+      <input id="chatInput" placeholder="Type a message…" />
+      <a class="btn-primary" href="https://calendly.com/your-name/intro-call" target="_blank" rel="noopener">Calendly</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img src="snr logo.png" alt="SNR Automations Logo" style="height: 40px;">
+              <span>SNR AUTOMATIONS</span>
+            </div>
+            <p class="tagline">ALL-IN-ONE AI PLATFORM</p>
+            <p class="tagline-secondary">Smarter Work. Bigger Impact</p>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <div class="footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html">Automate Tasks</a></li>
+              <li><a href="services.html">All-in-one SaaS</a></li>
+              <li><a href="services.html">Launchpad Academy</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#refund">Refund Policy</a></li>
+              <li><a href="#privacy">Privacy Policy</a></li>
+              <li><a href="#terms">Terms & Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <div class="footer-contact">
+            <h4>Contact</h4>
+            <p><strong>Email:</strong> snrautomation83@gmail.com</p>
+            <p><strong>Phone:</strong> +91 8946084672</p>
+            <p><strong>Address:</strong> Chennai, Tamil Nadu, India</p>
+            <div class="social-links">
+              <h5>FOLLOW US</h5>
+              <div class="social-icons">
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+                <a href="#" aria-label="Instagram">Instagram</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 SNR AUTOMATIONS. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

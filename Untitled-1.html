@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navigate to Main Button</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.8; }
+    .section { height: 600px; } /* Just to create scrolling space */
+    .main-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <h2>Course Description</h2>
+    <p>
+      This is a detailed course description.  
+      <br><br>
+      <button onclick="goToMain()">Apply (Small Button)</button>
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>More Info</h2>
+    <p>Scroll down for the main Apply button...</p>
+  </div>
+
+  <!-- Main button at bottom -->
+  <div class="section" id="mainApplySection">
+    <h2>Register Now</h2>
+    <button class="main-btn">Main Apply Button</button>
+  </div>
+
+  <script>
+    function goToMain() {
+      document.getElementById("mainApplySection").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
